@@ -1,0 +1,62 @@
+Original Graph:
+------------------------------------------------
+5	9	37	
+6	9	37	
+7	9	37	
+8	9	37	
+9	9	37	
+10	9	37	
+11	9	37	
+12	9	37	
+13	9	37	
+14	9	37	
+15	9	37	
+16	9	37	
+17	9	37	
+18	9	37	
+19	9	37	
+20	9	37	
+21	9	37	
+22	9	37	
+23	9	37	
+24	9	37	
+25	9	37	
+26	9	37	
+27	9	37	
+28	9	37	
+29	9	37	
+------------------------------------------------
+Minimum Spanning Tree (Kruskal):
+------------------------------------------------
+5	9	37	
+6	9	37	
+8	9	37	
+7	9	37	
+11	9	37	
+10	9	37	
+26	9	37	
+29	9	37	
+9	37	15	
+------------------------------------------------
+MST weight: 311
+Time elapsed: 0.000205 s
+[cn08:10583] *** Process received signal ***
+[cn08:10583] Signal: Segmentation fault (11)
+[cn08:10583] Signal code:  (2479)
+[cn08:10583] Failing at address: (nil)
+[cn08:10583] [ 0] /lib64/libc.so.6[0x3e114326a0]
+[cn08:10583] [ 1] /soft/openmpi-1.10.7/lib/libopen-pal.so.13(opal_memory_ptmalloc2_int_free+0x57)[0x2ab618c23137]
+[cn08:10583] [ 2] /soft/openmpi-1.10.7/lib/libopen-pal.so.13(opal_memory_ptmalloc2_free+0xd3)[0x2ab618c237a3]
+[cn08:10583] [ 3] /soft/openmpi-1.10.7/lib/openmpi/mca_coll_tuned.so(ompi_coll_tuned_topo_destroy_tree+0x16)[0x2ab61d686e66]
+[cn08:10583] [ 4] /soft/openmpi-1.10.7/lib/openmpi/mca_coll_tuned.so(+0x181f1)[0x2ab61d6991f1]
+[cn08:10583] [ 5] /soft/openmpi-1.10.7/lib/libmpi.so.12(mca_coll_base_comm_unselect+0x16b1)[0x2ab61869e8f1]
+[cn08:10583] [ 6] /soft/openmpi-1.10.7/lib/libmpi.so.12(+0x2d72b)[0x2ab61863672b]
+[cn08:10583] [ 7] /soft/openmpi-1.10.7/lib/libmpi.so.12(ompi_comm_finalize+0xf1)[0x2ab618636421]
+[cn08:10583] [ 8] /soft/openmpi-1.10.7/lib/libmpi.so.12(ompi_mpi_finalize+0x366)[0x2ab61864f3d6]
+[cn08:10583] [ 9] ./HW[0x401c71]
+[cn08:10583] [10] /lib64/libc.so.6(__libc_start_main+0xfd)[0x3e1141ed5d]
+[cn08:10583] [11] ./HW[0x400c79]
+[cn08:10583] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 10583 on node cn08 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
